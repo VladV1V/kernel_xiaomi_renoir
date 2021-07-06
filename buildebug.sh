@@ -28,8 +28,8 @@ echo "Making Kernel:"
 echo "-------------------"
 echo
 
-make CC="ccache clang" CXX="ccache clang++" LD=ld.lld O=out $DEFCONFIG
-make CC="ccache clang" CXX="ccache clang++" LD=ld.lld O=out $THREAD 2>&1 | tee kernel.log
+make CC="ccache clang" CXX="ccache clang++" O=out $DEFCONFIG
+make CC="ccache clang" CXX="ccache clang++" O=out $THREAD 2>&1 | tee kernel.log
 
 echo
 echo "-------------------"
@@ -73,7 +73,7 @@ cp -rp ./anykernel/* tmp
 cd tmp
 7za a -mx9 $TIME-tmp.zip *
 cd ..
-rm DynamIQ*.zip
+rm Noob*.zip
 cp -fp tmp/$TIME-tmp.zip Noob-Kernel-Mi11Lite5G-$TIME.zip
 rm -rf tmp
 chown -R vlad *
