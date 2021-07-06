@@ -8,7 +8,7 @@ export PATH=${CLANG_PATH}:${PATH}
 export CLANG_TRIPLE=aarch64-linux-gnu-
 export CROSS_COMPILE=/home/vlad/toolchains/proton-clang/bin/aarch64-linux-gnu- CC=clang CXX=clang++
 
-DEFCONFIG="vendor/renoir-qgki_defconfig"
+DEFCONFIG="renoir_defconfig"
 
 # Paths
 KERNEL_DIR=`pwd`
